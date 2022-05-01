@@ -49,19 +49,19 @@ errorout() {
 banner() {
 	clear
 	clear
-	printf "\n\e[1;35;47m                  \e[0m"
-printf "\n\e[1;35;47m AMORE  \e[0m"
-printf "\n\e[1;35;47m AMORE  \e[0m"
-printf "\n\e[1;35;47m                  \e[0m"
-printf "\n\n\e[3;34;40m AMORE - Yangi Avlod Yuzerboti\e[0m\n\n"
+	printf "\n\e[1;35;47m        \e[0m"
+printf "\n\e[1;35;47m LINUXIL   \e[0m"
+printf "\n\e[1;35;47m LINUXIL   \e[0m"
+printf "\n\e[1;35;47m            \e[0m"
+printf "\n\n\e[3;34;40m LINUXIL - Бесплатный быстрый юзер бот\e[32m\n\n"
 	
 }
 
 ##############################################################################
 
 banner
-printf '%s\n' "- Userbot yuklanishi 3-7 daqiqa"
-printf '%s' "- Daraja...  "
+printf '%s\n' "- Загрузка LINUXIL бота подождите 3-7 минут"
+printf '%s' "- Загрузка...  "
 
 ##############################################################################
 
@@ -91,8 +91,8 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 	export PATH="/app/.heroku/python/bin:$PATH" # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "UMod/friendly-telegram" ]; then
-	cd UMod || {
+if [ -d "LINUXIL/friendly-telegram" ]; then
+	cd LINUXIL || {
 		endspin "Error: Install git package and re-run installer"
 		exit 6
 	}
@@ -192,7 +192,7 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 fi
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf LINUXIL
+${SUDO_CMD}rm -rf LINUXIL 
 # shellcheck disable=SC2086
 runout ${SUDO_CMD}git clone https://github.com/fazliddin887/LINUXIL|| {
 	errorout "Clone failed."
@@ -209,7 +209,7 @@ runin ${SUDO_CMD}"python$PYVER" -m pip install -r requirements.txt --upgrade --u
 	errorin "Requirements failed!"
 	exit 4
 }
-endspin "- Готов! Sozlandi."
+endspin "- Готово! Настроено."
 rm -f ../ftg-install.log
 touch .setup_complete
 # shellcheck disable=SC2086,SC2015
