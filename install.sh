@@ -1,22 +1,5 @@
 #!/bin/bash
-
-#    Friendly Telegram (telegram userbot)
-#    Copyright (C) 2018-2022 The Authors
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-#    Modded by LinuxilTG Team
+# mod by umodules in uz language
 
 if [ ! -n "$BASH" ]; then
 	echo "Non-bash shell detected, fixing..."
@@ -63,21 +46,22 @@ errorout() {
 # pyfiglet -f smslant -w 50 friendly telegram | sed 's/\\/\\\\/g' | sed 's/"/\\"/g' | sed 's/`/\\`/g' | sed 's/^/printf "%s\\n" "/m;s/$/"/m'
 # Ugly, I know.
 
-banner() {	
-clear	
-clear	
-printf "\n\e[1;35;47m \e[0m"
-printf "\n\e[1;35;47m █▀▀█ █▀▄▀█ █▀▀█ █▀▀█ █▀▀ \e[0m"
-printf "\n\e[1;35;47m █▄▄█ █ ▀ █ █ █ █▄▄▀ █▀▀ ▀ ▀ ▀ ▀ ▀▀▀▀ █ █ ▀▀▀ \e[0m"
-printf "\n\e[1;35;47m \e[0m"
-printf "\n\n\e[3;34;40m Linuxil - Юзер бот нового поколения\e[0m\n\n"
+banner() {
+	clear
+	clear
+	printf "\n\e[1;35;47m                  \e[0m"
+printf "\n\e[1;35;47m AMORE  \e[0m"
+printf "\n\e[1;35;47m AMORE  \e[0m"
+printf "\n\e[1;35;47m                  \e[0m"
+printf "\n\n\e[3;34;40m AMORE - Yangi Avlod Yuzerboti\e[0m\n\n"
+	
 }
 
 ##############################################################################
 
 banner
-printf '%s\n' "Процесс займет 10-15 минут "
-printf '%s' "Установка...  "
+printf '%s\n' "- Userbot yuklanishi 3-7 daqiqa"
+printf '%s' "- Daraja...  "
 
 ##############################################################################
 
@@ -107,8 +91,8 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 	export PATH="/app/.heroku/python/bin:$PATH" # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "Friendly-Telegram/friendly-telegram" ]; then
-	cd Friendly-Telegram || {
+if [ -d "UMod/friendly-telegram" ]; then
+	cd UMod || {
 		endspin "Error: Install git package and re-run installer"
 		exit 6
 	}
@@ -208,13 +192,13 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 fi
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf Friendly-Telegram
+${SUDO_CMD}rm -rf UMod
 # shellcheck disable=SC2086
-runout ${SUDO_CMD}git clone https://github.com/fazliddin887/LINUXIL || {
+runout ${SUDO_CMD}git clone https://github.com/fazliddin887/LINUXIL|| {
 	errorout "Clone failed."
 	exit 3
 }
-cd Friendly-Telegram || {
+cd AMORE || {
 	endspin "Error: Install git package and re-run installer"
 	exit 7
 }
@@ -225,7 +209,7 @@ runin ${SUDO_CMD}"python$PYVER" -m pip install -r requirements.txt --upgrade --u
 	errorin "Requirements failed!"
 	exit 4
 }
-endspin "Installation successful. Launching setup interface..."
+endspin "- Готов! Sozlandi."
 rm -f ../ftg-install.log
 touch .setup_complete
 # shellcheck disable=SC2086,SC2015
