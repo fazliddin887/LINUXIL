@@ -192,13 +192,13 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 fi
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf UMod
+${SUDO_CMD}rm -rf LINUXIL
 # shellcheck disable=SC2086
 runout ${SUDO_CMD}git clone https://github.com/fazliddin887/LINUXIL|| {
 	errorout "Clone failed."
 	exit 3
 }
-cd AMORE || {
+cd LINUXIL || {
 	endspin "Error: Install git package and re-run installer"
 	exit 7
 }
