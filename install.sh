@@ -49,11 +49,11 @@ errorout() {
 banner() {
 	clear
 	clear
-	printf "\n\e[1;35;47m        \e[0m"
-printf "\n\e[1;35;47m LINUXIL   \e[0m"
-printf "\n\e[1;35;47m LINUXIL   \e[0m"
-printf "\n\e[1;35;47m            \e[0m"
-printf "\n\n\e[3;34;40m LINUXIL - Бесплатный быстрый юзер бот\e[32m\n\n"
+	printf "\n\e[1;33;47m        \e[0m"
+printf "\n\e[1;33;47m LINUXIL   \e[0m"
+printf "\n\e[1;33;47m LINUXIL   \e[0m"
+printf "\n\e[1;33;47m            \e[0m"
+printf "\n\n\e[3;36;40m LINUXIL - Бесплатный и быстрый юзер бот\e[32m\n\n"
 	
 }
 
